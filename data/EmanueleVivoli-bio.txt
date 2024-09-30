@@ -1,0 +1,5 @@
+Emanuele Vivoli is a PhD student jointly at Computer Vision Center (UAB, Barcelona) and MICC (UNIFI, Italy), where he works on vision and language, particularly on Comics/Manga. 
+
+He interned as research stays in EISLAB (Luleå Technique University) in 2019 supervised by Marcus Liwicki. From 2021 to 2022 he worked as researcher in the AILab (UNIFI, Italy), supervised by Simone Marinai. Lastly, in 2022 he interned the Computer Vision Center (UAB, Barcelona), supervised by Dimosthenis Karatzas. Finally, I started my PhD in November 2022 in Florence, and October 2023 in Barcelona, supervised by Marco Bertini and Dimosthenis Karatzas.
+
+He published in conferences such as NeurIPS, ECCV, BMVC, ICDAR, ICPR, IRCLD, ACM DocEng. He served as reviewer for ECCV, ICCV, CVPR, ACM Multimedia, ICDAR, and IJDAR.

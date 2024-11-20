@@ -133,3 +133,25 @@ h2 {
 span.highlight {
   background-color: #ffffd0;
 }
+
+.icon-link {
+    color: #4a4a4a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+    color: #000;
+}
+
+.icon-link i {
+    font-size: 1.4em;
+}
+
+.arxiv-link {
+    color: #B31B1B;  /* arXiv's official red color */
+}
+
+.arxiv-link:hover {
+    color: #8B0000;  /* darker red on hover */
+}

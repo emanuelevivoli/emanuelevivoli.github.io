@@ -155,3 +155,228 @@ span.highlight {
 .arxiv-link:hover {
     color: #8B0000;  /* darker red on hover */
 }
+
+/* Paper description toggle button */
+.paper-description {
+  display: block;
+}
+
+.toggle-description {
+  display: none;
+  background: none;
+  border: none;
+  color: #1772d0;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  margin: 5px 0;
+}
+
+.toggle-description:hover {
+  color: #f09228;
+}
+
+.toggle-description::before {
+  content: "▼ close ";
+}
+
+.toggle-description.collapsed::before {
+  content: "▶ open ";
+}
+
+/* Paper separator */
+.paper-separator {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+  width: 100%;
+}
+
+/* Responsive design for mobile devices */
+@media only screen and (max-width: 768px) {
+  table {
+    display: block;
+    width: 100%;
+  }
+  
+  tbody {
+    display: block;
+    width: 100%;
+  }
+  
+  tr {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  td {
+    display: block;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px 20px !important;
+  }
+  
+  /* Ensure images are responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* Adjust profile image size on mobile */
+  .profile-image {
+    width: 60%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  /* Center text on mobile */
+  .name {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  /* Adjust spacing for paper entries */
+  .one {
+    margin-bottom: 15px;
+  }
+
+  /* Paper description handling on mobile */
+  .paper-description {
+    display: none;
+    margin-top: 10px;
+  }
+
+  .paper-description.show {
+    display: block;
+  }
+
+  .toggle-description {
+    display: inline-block;
+  }
+
+  /* Make paper images full width on mobile */
+  .one {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .one img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+  }
+
+  /* Adjust separator spacing on mobile */
+  .paper-separator {
+    margin: 30px 0;
+  }
+
+  /* Center the paper title after the full-width image */
+  .papertitle {
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    font-size: 16px;  /* slightly bigger */
+  }
+
+  /* Center the authors list */
+  .authors-list {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  /* Center the venue and links */
+  .venue-info, .paper-links {
+    text-align: center;
+    display: block;
+    margin: 5px 0;
+  }
+
+  /* Make paper images fit within the yellow box */
+  tr[bgcolor="#ffffd0"] {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffd0;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  tr[bgcolor="#ffffd0"] td {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  tr[bgcolor="#ffffd0"] .one {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+
+  tr[bgcolor="#ffffd0"] .one img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Authors list alignment */
+  .authors-list {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  /* Venue info alignment */
+  .venue-info {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  /* Paper links container */
+  .paper-links {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  /* Toggle description button */
+  .toggle-description {
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+    padding: 5px 0;
+  }
+
+  /* Remove any unwanted spacing */
+  br + br {
+    display: none;
+  }
+
+  /* Ensure consistent spacing between sections */
+  td {
+    padding: 15px !important;
+  }
+
+  /* Make paper images full width */
+  tr[bgcolor="#ffffd0"] .one {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  tr[bgcolor="#ffffd0"] .one img {
+    width: 100%;
+    height: auto;
+  }
+}

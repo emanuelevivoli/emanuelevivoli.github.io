@@ -12,6 +12,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
     
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Add click handlers for all toggle buttons
+        document.querySelectorAll('.toggle-description').forEach(button => {
+          button.addEventListener('click', function() {
+            const description = this.nextElementSibling;
+            description.classList.toggle('show');
+            this.classList.toggle('collapsed');
+          });
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -49,7 +61,7 @@
                 </p>
               </td>
               <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="images/EmanueleVivoli-new.png"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/EmanueleVivoli-new.png" class="hoverZoomLink"></a>
+                <a href="images/EmanueleVivoli-new.png"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/EmanueleVivoli-new.png" class="hoverZoomLink profile-image"></a>
               </td>
             </tr>
           </tbody></table>
@@ -68,7 +80,7 @@
     <tr bgcolor="#ffffd0">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <img src='images/25-ICDAR.png' width=100%>
+          <img src='images/25-ICDAR.png' width="100%">
         </div>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
@@ -83,23 +95,32 @@
         <a href="https://scholar.google.com/citations?user=ChmX8ogAAAAJ&hl=en">Ernest Valveny Llobet</a>,
         <a href="https://scholar.google.com/citations?user=xASEtrUAAAAJ&hl=en">Dimosthenis Karatzas</a>
         <br>
-        <em>ICDAR<em>, 2025 &nbsp <font color="red"><strong>(oral)</strong></font>
+        <em>ICDAR</em>, 2025 &nbsp <font color="red"><strong>(oral)</strong></font>
         <br><br>
-        <a href="https://huggingface.co/collections/VLR-CVC/comics-pick-a-panel-67d41b505baf5761e2fadd07" class="icon-link">
-          <i class="fas fa-globe"></i>
-        </a>
-        &nbsp;&nbsp;
-        <a href="https://github.com/llabres/ComicsPAP" class="icon-link">
-          <i class="fab fa-github"></i>
-        </a>
-        &nbsp;&nbsp;
-        <a href="https://arxiv.org/abs/2503.08561" class="icon-link">
-          <i class="fas fa-scroll"></i>
-        </a>
-        <p></p>
-        <p>
-          In this work, I introduce ComicsPAP, a large-scale benchmark for comic strip understanding with over 100k samples organized into 5 subtasks. Through this Pick-a-Panel framework, I evaluate state-of-the-art MLLMs and demonstrate their limitations in capturing sequential and contextual dependencies, while also proposing adaptations that achieve better performance than models 10x larger.
-        </p>
+        <span>
+          <a href="https://huggingface.co/collections/VLR-CVC/comics-pick-a-panel-67d41b505baf5761e2fadd07" class="icon-link">
+            <i class="fas fa-globe"></i>
+          </a>
+          &nbsp;&nbsp;
+          <a href="https://github.com/llabres/ComicsPAP" class="icon-link">
+            <i class="fab fa-github"></i>
+          </a>
+          &nbsp;&nbsp;
+          <a href="https://arxiv.org/abs/2503.08561" class="icon-link">
+            <i class="fas fa-scroll"></i>
+          </a>
+        </span>
+        <button class="toggle-description collapsed">description</button>
+        <div class="paper-description">
+          <p>
+            In this work, I introduce ComicsPAP, a large-scale benchmark for comic strip understanding with over 100k samples organized into 5 subtasks. Through this Pick-a-Panel framework, I evaluate state-of-the-art MLLMs and demonstrate their limitations in capturing sequential and contextual dependencies, while also proposing adaptations that achieve better performance than models 10x larger.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr class="paper-separator">
       </td>
     </tr>
     
@@ -122,21 +143,30 @@
         <br>
         <em>ECCV (workshop) AI4VA<em>, 2024
         <br><br>
-        <a href="https://emanuelevivoli.github.io/ComiCap" class="icon-link">
-          <i class="fas fa-globe"></i>
-        </a>
-        &nbsp;&nbsp;
-        <a href="https://github.com/emanuelevivoli/CoMix" class="icon-link">
-          <i class="fab fa-github"></i>
-        </a>
-        &nbsp;&nbsp;
-        <a href="https://arxiv.org/abs/2409.16159" class="icon-link">
-          <i class="fas fa-scroll"></i>
-        </a>
-        <p></p>
-        <p>
-        This work proposes a Vision-Language Model pipeline to generate dense, grounded captions for comic panels, outperforming task-specific models without additional training. I used it to annotate over 2 million panels, enhancing comic understanding.
-        </p>
+        <span>
+          <a href="https://emanuelevivoli.github.io/ComiCap" class="icon-link">
+            <i class="fas fa-globe"></i>
+          </a>
+          &nbsp;&nbsp;
+          <a href="https://github.com/emanuelevivoli/CoMix" class="icon-link">
+            <i class="fab fa-github"></i>
+          </a>
+          &nbsp;&nbsp;
+          <a href="https://arxiv.org/abs/2409.16159" class="icon-link">
+            <i class="fas fa-scroll"></i>
+          </a>
+        </span>
+        <button class="toggle-description collapsed">description</button>
+        <div class="paper-description">
+          <p>
+            This work proposes a Vision-Language Model pipeline to generate dense, grounded captions for comic panels, outperforming task-specific models without additional training. I used it to annotate over 2 million panels, enhancing comic understanding.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr class="paper-separator">
       </td>
     </tr>
 
@@ -170,10 +200,17 @@
       <a href="https://arxiv.org/abs/2409.09502" class="icon-link">
         <i class="fas fa-scroll"></i>
       </a>
-      <p></p>
-      <p>
-      In this survey, I review comics understanding through the lens of vision-language models, introducing a new taxonomy, the Layer of Comics Understanding (LoCU), to redefine tasks in comics research, analyze datasets, and highlight challenges and future directions for AI applications in comics' unique visual-textual narratives.
-      </p>
+      &nbsp;<button class="toggle-description collapsed">description</button>
+      <div class="paper-description">
+        <p>
+          In this survey, I review comics understanding through the lens of vision-language models, introducing a new taxonomy, the Layer of Comics Understanding (LoCU), to redefine tasks in comics research, analyze datasets, and highlight challenges and future directions for AI applications in comics' unique visual-textual narratives.
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr class="paper-separator">
     </td>
   </tr>
 
@@ -203,10 +240,17 @@
       <a href="https://arxiv.org/abs/2409.01835" class="icon-link">
         <i class="fas fa-scroll"></i>
       </a>
-      <p></p>
-      <p>
-      In this paper, I propose GCPL and CoMPLe to improve fine-grained categorization in vision-language models using generative modeling and contrastive learning, outperforming existing few-shot recognition methods.
-      </p>
+      <button class="toggle-description collapsed">description</button>
+      <div class="paper-description">
+        <p>
+          In this paper, I propose GCPL and CoMPLe to improve fine-grained categorization in vision-language models using generative modeling and contrastive learning, outperforming existing few-shot recognition methods.
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr class="paper-separator">
     </td>
   </tr>
 
@@ -239,10 +283,17 @@
       <a href="https://arxiv.org/abs/2407.03550" class="icon-link">
         <i class="fas fa-scroll"></i>
       </a>
-      <p></p>
-      <p>
-      CoMix is a multi-task comic analysis benchmark covering object detection, character identification, and multi-modal reasoning, using diverse datasets to balance styles beyond manga. I evaluate models in zero-shot and fine-tuning settings, revealing a gap between human and model performance, and set a new standard for comprehensive comic understanding.
-      </p>
+      <button class="toggle-description collapsed">description</button>
+      <div class="paper-description">
+        <p>
+          CoMix is a multi-task comic analysis benchmark covering object detection, character identification, and multi-modal reasoning, using diverse datasets to balance styles beyond manga. I evaluate models in zero-shot and fine-tuning settings, revealing a gap between human and model performance, and set a new standard for comprehensive comic understanding.
+        </p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <hr class="paper-separator">
     </td>
   </tr>
 
@@ -279,10 +330,12 @@
         <a href="https://arxiv.org/pdf/2407.03540" class="icon-link">
           <i class="fas fa-scroll"></i>
         </a>
-        <p></p>
-        <p>
-        In this work, I introduce the Comics Datasets Framework, standardizing annotations and addressing manga overrepresentation with the Comics100 dataset. I benchmark detection architectures to tackle challenges like small datasets and inconsistent annotations, aiming to improve object detection and support more complex computational tasks in comics.
-        </p>
+        <button class="toggle-description collapsed">description</button>
+        <div class="paper-description">
+          <p>
+            In this work, I introduce the Comics Datasets Framework, standardizing annotations and addressing manga overrepresentation with the Comics100 dataset. I benchmark detection architectures to tackle challenges like small datasets and inconsistent annotations, aiming to improve object detection and support more complex computational tasks in comics.
+          </p>
+        </div>
       </td>
     </tr>
 	
@@ -313,9 +366,17 @@
         <a href="https://arxiv.org/html/2403.03719v1" class="icon-link">
           <i class="fas fa-scroll"></i>
         </a>
-        <p>
-        In this work, I introduce a Multimodal-LLM for a comics text-cloze task, improving accuracy by 10% over existing models through a domain-adapted visual encoder and new OCR annotations, and extend the task to a generative format.
-        </p>
+        <button class="toggle-description collapsed">description</button>
+        <div class="paper-description">
+          <p>
+            In this work, I introduce a Multimodal-LLM for a comics text-cloze task, improving accuracy by 10% over existing models through a domain-adapted visual encoder and new OCR annotations, and extend the task to a generative format.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr class="paper-separator">
       </td>
     </tr>
 
@@ -341,9 +402,17 @@
         <a href="https://dl.acm.org/doi/pdf/10.1145/3573128.3609351" class="icon-link">
           <i class="fas fa-scroll"></i>
         </a>
-        <p>
-        In this paper, I propose a smart pen and deep learning-based approach for early dysgraphia detection in children, offering a faster and more objective alternative to the traditional BHK test, validated through handwriting samples and expert interviews.
-        </p>
+        <button class="toggle-description collapsed">description</button>
+        <div class="paper-description">
+          <p>
+            In this paper, I propose a smart pen and deep learning-based approach for early dysgraphia detection in children, offering a faster and more objective alternative to the traditional BHK test, validated through handwriting samples and expert interviews.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr class="paper-separator">
       </td>
     </tr>
 
@@ -372,9 +441,17 @@
         <a href="https://arxiv.org/abs/2302.01451" class="icon-link">
           <i class="fas fa-scroll"></i>
         </a>
-        <p>
-          In this paper, I introduce Contextualized Table Extraction (CTE), a task to extract and structure tables within their document context, supported by a new dataset of 75k annotated pages from scientific papers, combining data from PubTables-1M and PubLayNet.
-        </p>
+        <button class="toggle-description collapsed">description</button>
+        <div class="paper-description">
+          <p>
+            In this paper, I introduce Contextualized Table Extraction (CTE), a task to extract and structure tables within their document context, supported by a new dataset of 75k annotated pages from scientific papers, combining data from PubTables-1M and PubLayNet.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr class="paper-separator">
       </td>
     </tr>
 
@@ -407,9 +484,17 @@
         <a href="https://arxiv.org/abs/2209.06730" class="icon-link">
           <i class="fas fa-scroll"></i>
         </a>
-        <p>
-        In this paper, I introduce a framework for Multilingual Scene Text Visual Question Answering (MUST-VQA) that handles new languages in a zero-shot setting, evaluates models in IID and zero-shot scenarios, and demonstrates the effectiveness of adapting multilingual language models for the STVQA task.
-        </p>
+        <button class="toggle-description collapsed">description</button>
+        <div class="paper-description">
+          <p>
+            In this paper, I introduce a framework for Multilingual Scene Text Visual Question Answering (MUST-VQA) that handles new languages in a zero-shot setting, evaluates models in IID and zero-shot scenarios, and demonstrates the effectiveness of adapting multilingual language models for the STVQA task.
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr class="paper-separator">
       </td>
     </tr>
 
@@ -440,10 +525,17 @@
         <a href="https://arxiv.org/abs/2208.11203" class="icon-link">
           <i class="fas fa-scroll"></i>
         </a>
-        <p></p>
-        <p>
+        <button class="toggle-description collapsed">description</button>
+        <div class="paper-description">
+          <p>
 				In this work, I address the problem of table extraction in scientific papers using Graph Neural Networks with enriched representation embeddings to improve distinction between tables, cells, and headers, evaluated on a dataset combining PubLayNet and PubTables-1M.
-        </p>
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr class="paper-separator">
       </td>
     </tr>
 
